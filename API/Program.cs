@@ -18,7 +18,8 @@ var app = builder.Build();
 
 //cors
 app.UseCors(builder => builder
-    .AllowAnyHeader().AllowAnyMethod().WithOrigins(""));
+    .AllowAnyHeader().AllowAnyMethod()
+    .AllowCredentials().WithOrigins("http://localhost:4200"));
 
 app.UseAuthentication();
 app.UseAuthorization();
